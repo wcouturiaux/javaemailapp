@@ -20,7 +20,7 @@ public class Student {
         System.out.print("Enter student last name: ");
         this.lastName = in.nextLine();
 
-        System.out.print("Class Options:\n1 - Freshman\n2 - Sophomore\n3 - Junior\n4 - Senior\n" +
+        System.out.print("Class Options:\n  1 - Freshman\n  2 - Sophomore\n  3 - Junior\n  4 - Senior\n" +
                 "Enter student class standing: ");
         this.classStanding = in.nextInt();
 
@@ -70,6 +70,6 @@ public class Student {
                 "\nGrade Level: " + classStanding +
                 "\nStudent ID: " + studentID+
                 "\nCourses Enrolled: " + courses +
-                "\nBalance: $" + tuitionBalance;
+                "\nBalance: $" + tuitionBalance + "\n";
     }
 }
