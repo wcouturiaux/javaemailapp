@@ -5,8 +5,8 @@ public class Savings extends Account {
     private int safetyDepositBoxID;
     private int getSafetyDepositBoxKey;
     // Constructor to initialize settings for savings props
-    public Savings(String name) {
-        super(name);
+    public Savings(String name, String ssn, double initDeposit) {
+        super(name, ssn, initDeposit);
         System.out.println("  New Savings account");
         //System.out.println("NAME: " + name); move to ACCOUNT as shared between acct types
     }
