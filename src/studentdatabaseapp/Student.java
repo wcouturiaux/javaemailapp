@@ -6,11 +6,11 @@ public class Student {
     private String firstName;
     private String lastName;
     private int classStanding;
-    private int studentID;
+    private String studentID;
     private String courses;
     private int tuitionBalance;
     private static int costOfCourse = 600;
-    private static int id = 1001;
+    private static int id = 1000;
     //Constructor: Prompt user to enter Name and year
     public Student() {
         Scanner in = new Scanner(System.in);
@@ -24,10 +24,15 @@ public class Student {
                 "Enter student class standing: ");
         this.classStanding = in.nextInt();
 
-        System.out.println(firstName + lastName + classStanding);
+        setStudentID();
+        System.out.println(firstName + lastName + studentID);
     }
     //Generate an ID
-
+    private void setStudentID() {
+        //Grade level + ID
+        id++;
+        this.studentID = classStanding + "" + id;
+    }
     //Enroll in Courses
 
     //View Balance
