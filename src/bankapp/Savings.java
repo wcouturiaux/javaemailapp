@@ -2,7 +2,8 @@ package bankapp;
 
 public class Savings extends Account {
     // List props specific to savings
-
+    private int safetyDepositBoxID;
+    private int getSafetyDepositBoxKey;
     // Constructor to initialize settings for savings props
     public Savings(String name) {
         super(name);

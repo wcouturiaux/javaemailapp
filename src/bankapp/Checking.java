@@ -2,7 +2,8 @@ package bankapp;
 
 public class Checking extends Account {
     //List checking specific properties
-
+    private int debitCardNumber;
+    private int debitCardPin;
     //Constructor to initialize checking acct props
     public Checking(String name) {
         super(name);
