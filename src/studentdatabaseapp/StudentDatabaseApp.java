@@ -1,7 +1,11 @@
 package studentdatabaseapp;
 
 public class StudentDatabaseApp {
-    //Ask how many users to add
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        //Ask how many users to add
 
-    //Create n number of new students
+        //Create n number of new students
+    }
+
 }
