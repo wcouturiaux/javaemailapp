@@ -51,8 +51,18 @@ public class Student {
         System.out.println("TUITION BALANCE: " + tuitionBalance);
     }
     //View Balance
-
+    public void viewBalance() {
+        System.out.println("Your Balance is : $" + tuitionBalance);
+    }
     //Pay Tuition
-
+    public void payTuition() {
+        viewBalance();
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the payment amount: ");
+        int payment = in.nextInt();
+        tuitionBalance -= payment;
+        System.out.println("Thank you for your payment of $" + payment);
+        viewBalance();
+    }
     //Show Status
 }
