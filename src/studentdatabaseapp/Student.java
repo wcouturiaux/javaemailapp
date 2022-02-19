@@ -20,12 +20,12 @@ public class Student {
         System.out.print("Enter student last name: ");
         this.lastName = in.nextLine();
 
-        System.out.print("Class Options:\n1 - Freshman\n2 - Sophmore\n3 - Junior\n4 - Senior\n" +
+        System.out.print("Class Options:\n1 - Freshman\n2 - Sophomore\n3 - Junior\n4 - Senior\n" +
                 "Enter student class standing: ");
         this.classStanding = in.nextInt();
 
         setStudentID();
-        System.out.println(firstName + lastName + studentID);
+        //System.out.println(firstName + lastName + studentID);
     }
     //Generate an ID
     private void setStudentID() {
@@ -41,14 +41,14 @@ public class Student {
             Scanner in = new Scanner(System.in);
             String course = in.nextLine();
             if (!course.equals("Q")) {
-                courses += "\n" + course;
+                courses += "\n  " + course;
                 tuitionBalance += costOfCourse;
             } else {
                 break;
             }
         } while (1 != 0);
-        System.out.println("ENROLLED IN: " + courses);
-        System.out.println("TUITION BALANCE: " + tuitionBalance);
+        //System.out.println("ENROLLED IN: " + courses);
+        //System.out.println("TUITION BALANCE: " + tuitionBalance);
     }
     //View Balance
     public void viewBalance() {
@@ -65,4 +65,11 @@ public class Student {
         viewBalance();
     }
     //Show Status
+    public String showInfo() {
+        return "Name: " + firstName + " " + lastName +
+                "\nGrade Level: " + classStanding +
+                "\nStudent ID: " + studentID+
+                "\nCourses Enrolled: " + courses +
+                "\nBalance: $" + tuitionBalance;
+    }
 }
