@@ -17,8 +17,8 @@ public class StudentDatabaseApp {
             students[n].enroll();
             students[n].payTuition();
         }
+
         for (int n = 0; n<numStudents; n++)
             System.out.println(students[n].showInfo());
     }
-
 }
