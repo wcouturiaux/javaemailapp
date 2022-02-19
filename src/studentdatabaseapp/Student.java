@@ -7,8 +7,8 @@ public class Student {
     private String lastName;
     private int classStanding;
     private String studentID;
-    private String courses;
-    private int tuitionBalance;
+    private String courses = "";
+    private int tuitionBalance = 0;
     private static int costOfCourse = 600;
     private static int id = 1000;
     //Constructor: Prompt user to enter Name and year
@@ -34,7 +34,22 @@ public class Student {
         this.studentID = classStanding + "" + id;
     }
     //Enroll in Courses
-
+    public void enroll() {
+        //Loop until user hits Q
+        do {
+            System.out.print("Enter course to enroll (Q to quit): ");
+            Scanner in = new Scanner(System.in);
+            String course = in.nextLine();
+            if (!course.equals("Q")) {
+                courses += "\n" + course;
+                tuitionBalance += costOfCourse;
+            } else {
+                break;
+            }
+        } while (1 != 0);
+        System.out.println("ENROLLED IN: " + courses);
+        System.out.println("TUITION BALANCE: " + tuitionBalance);
+    }
     //View Balance
 
     //Pay Tuition
