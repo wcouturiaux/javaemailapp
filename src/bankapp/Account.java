@@ -14,7 +14,7 @@ public abstract class Account implements IBaseRate{
         this.name = name;
         this.ssn = ssn;
         balance = initDeposit;
-        System.out.println("NAME: " + name + " SSN: " + ssn + " BALANCE: $" + balance);
+        //System.out.println("NAME: " + name + " SSN: " + ssn + " BALANCE: $" + balance);
         index++;
         this.acctNumber = setAccountNumber();
         //System.out.println("ACCOUNT NUM: " + this.acctNumber);
