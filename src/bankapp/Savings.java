@@ -14,11 +14,17 @@ public class Savings extends Account {
         //System.out.println("ACCOUNT NUM: " + this.acctNumber);
         //System.out.println("NAME: " + name); move to ACCOUNT as shared between acct types
     }
+
     // List methods specific to savings acct.
     private void setSafteyDepositBox() {
         safetyDepositBoxID = (int) (100 + Math.random() * (Math.pow(10,3)-100));
         safetyDepositBoxKey = (int) (1000 + Math.random() * (Math.pow(10,4)-1000));
-        System.out.println(safetyDepositBoxID + "/" + safetyDepositBoxKey);
+        //System.out.println(safetyDepositBoxID + "/" + safetyDepositBoxKey);
+    }
+
+    @Override
+    public void setRate() {
+        rate = getBaseRate()-0.25;
     }
 
     @Override
